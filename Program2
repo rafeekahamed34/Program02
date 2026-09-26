@@ -1,0 +1,7 @@
+CREATE TABLE student(
+StudentID INT(5) PRIMARY KEY,
+StudentName VARCHAR(20) NOT NULL,
+Gender VARCHAR(10),
+DepartmentID INT(5) NOT NULL, CONSTRAINT UQ_StudentName UNIQUE (StudentName), CONSTRAINT FK_DepartmentID FOREIGN KEY (DepartmentID) REFERENCES Department (DepartmentID)
+);
+DESC student;
